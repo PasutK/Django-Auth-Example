@@ -1,0 +1,235 @@
+.bg-warning{
+    background-color: #f59301 !important;
+    font-weight: 600;
+}
+
+.text-warning{
+    color:#f59301 !important;
+}
+
+.btn-warning{
+    background-color: #f59301 !important;
+    border-color: #f59301 !important;
+    color: #fefefe !important;
+    &:hover{
+        background-color:#fefefe ;
+    }
+}
+
+.btn-warning:hover{
+    background-color:#fefefe ;
+}
+
+.btn-warning:focus{
+    background-color: black ;
+    color:black;
+}
+
+.btn-secondary{
+    background-color: #e9e9e9 !important;
+    border-color: #e9e9e9 !important;
+    color: black !important;
+    &:hover{
+        background-color:#fefefe ;
+    }
+}
+
+/* label.btn-outline-warning{
+    background-color: #fefefe !important;
+    border-color:#f59301 !important;
+}
+
+label.btn-outline-warning:checked{
+    background-color: #f59301 !important;
+    border-color:#f59301 !important;
+    color: white;
+} */
+
+.custom-radio:checked + .custom-radio-label {
+    background-color: #f59301 !important;
+    border-color: #f59301 !important;
+    color: #fff !important;
+}
+
+.sfw-m{
+    font-weight: 400 !important;
+}
+
+.sfs-5{
+    font-size:16pt;
+}
+
+.sfs-6{
+    font-size:13pt;
+}
+
+.sfs-7{
+    font-size:10pt !important;
+}
+
+.sfs-8{
+    font-size:3pt !important;
+}
+
+nav ul.navbar-nav li.nav-item {
+    display: inline-block;
+    list-style: none;
+    font-size: 2rem;
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul.navbar-nav li.nav-item:after {
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #fefefe;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+nav ul.navbar-nav li.nav-item:hover::after {
+    width: 100%;
+}
+
+nav ul.navbar-nav li.nav-item .dropdown-menu {
+    display: none; /* Hide the dropdown menu by default */
+    position: absolute;
+    z-index: 1;
+}
+
+nav ul.navbar-nav li.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+nav ul.navbar-nav li.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+
+}
+
+nav ul.navbar-nav li.dropdown:hover .dropdown-menu {
+    display: block;
+    height: auto;
+    background-color: #f59301;
+    border:white;
+}
+
+a.dropdown-item:hover {
+    background-color: white !important;
+    color: #f59301 !important;
+}
+
+
+.nav-brand{
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+a.stretched-link{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+p.card-text{
+    color: black !important;
+}
+
+h1 h2 h3 h4 h5{
+    font-family: 'Geologica', sans-serif;
+}
+.th{
+    font-family: 'Bai Jamjuree' !important;
+}
+
+p{
+    font-weight: 500;
+    font-size: 14pt;
+}
+
+.thumb-post img {
+    object-fit: none !important; /* Do not scale the image */
+    object-position: center !important; /* Center the image within the element */
+    width: 100% !important;
+    max-height: 50px !important;
+    margin-bottom: 1rem !important;
+  }
+
+/* Calender style */
+.calendar {
+    width: 98%;
+    margin: auto;
+    font-size: 13px;
+}
+
+.calendar tr, .calendar td {
+border: 1px solid black;
+}
+
+.calendar th {
+padding: 10px;
+text-align: center;
+font-size: 18px;
+}
+
+.calendar td {
+width: 200px;
+height: 150px;
+padding: 20px 0px 0px 5px;
+}
+
+.month {
+font-size: 25px;
+}
+
+.date {
+font-size: 16px;
+}
+
+ul {
+height: 100%;
+padding: 0px 5px 0px 20px;
+}
+
+a {
+color: #000000;
+}
+
+.cropped-image {
+    width: auto;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cropped-image::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+.cropped-center-image {
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 400px;
+    width: 400px;
+}
+
+td.nowrap {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.not-visible{
+    display: none;
+}
