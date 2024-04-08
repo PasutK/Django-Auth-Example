@@ -22,7 +22,8 @@
                 </div>
                 {% endif %}
                 {% if perms.user_preferences.is_admin %}
-                <h1>Admin Panel...</h1>
+                <h1>Admin Menu</h1>
+                <a href="/auth/add-new-teacher" class="mt-3 btn btn-primary"> Add new teacher </a>
                 {% elif perms.user_preferences.is_teacher %}
                 <h1>Teacher Section ...</h1>
                 {% elif perms.user_preferences.is_parents %}

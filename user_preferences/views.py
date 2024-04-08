@@ -28,7 +28,7 @@ def UserLogout(request):
 
 
 def AddNewTeacher(request):
-    no_role_user_set = User.objects.filter(parents__isnull=True, teacher__isnull=True, student__isnull=True)
+    no_role_user_set = User.objects.filter(parents__isnull=True, teacher__isnull=True)
     if request.method == "POST":
         user = User.objects.get(pk=request.POST.get('abstract_user'))
         user.nickname = request.POST.get('nickname')
