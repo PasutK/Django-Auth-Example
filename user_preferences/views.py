@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.models import auth
 from django.contrib import messages
 from .models import User, Teacher
+from django.contrib.auth.decorators import login_required, permission_required
 
 # Create your views here.
 
@@ -21,12 +22,12 @@ def UserLogin(request):
 
     return render(request, 'login_page.html',{})
 
-
+@login_required
 def UserLogout(request):
     auth.logout(request)
     return redirect('/')
 
-
+@permission_required('user_preferences.is_admin', raise_exception=True)
 def AddNewTeacher(request):
     no_role_user_set = User.objects.filter(parents__isnull=True, teacher__isnull=True)
     if request.method == "POST":
