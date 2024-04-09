@@ -38,6 +38,9 @@ class Teacher(models.Model):
     image_url = models.CharField(max_length=1024, null=True, blank=True)
     joined_date = models.DateField(default=timezone.now)
 
+    def __str__ (self) -> str:
+        return self.abstract_user.first_name + " " + self.abstract_user.last_name
+
 class Student(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)

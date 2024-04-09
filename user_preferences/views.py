@@ -49,3 +49,13 @@ def AddNewTeacher(request):
         return render(request, 'landing-page.html',{})
     print(no_role_user_set)
     return render(request, 'add_new_teacher.html',{"user_set":no_role_user_set})
+
+@permission_required('user_preferences.is_teacher', raise_exception=True)
+def TeacherProfilePage(request):
+    teacher = Teacher.objects.get(abstract_user=request.user)
+    return render(request, 'teacher_profile.html',{"teacher":teacher})
+
+@permission_required('user_preferences.is_teacher', raise_exception=True)
+def TeacherPage(request):
+    return render(request, 'teacher_homepage.html',{})
+
